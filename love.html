@@ -14,6 +14,7 @@
         width: 100%;
         height: 100%;
       }
+      
       #pinkboard {
         animation: anim 1.5s ease-in-out infinite;
         -webkit-animation: anim 1.5s ease-in-out infinite;
@@ -173,13 +174,20 @@
       };
       Heart.prototype.draw = function (i) {
         ctx.globalAlpha = this.opacity;
-        ctx.font = `${180 * this.scale}px "微软雅黑"`;
+        ctx.font = `${180 * this.scale}px "hongdoucukaiti"`;
         // ctx.font="20px";
         ctx.fillStyle = colors[i % 18];
         ctx.fillText(
           "杨咩咩",
           this.x - this.width * 0.5,
           this.y - this.height * 0.5,
+          this.width,
+          this.height
+        );
+        ctx.fillText(
+          "小易",
+          this.x - this.width * 1,
+          this.y - this.height * 1,
           this.width,
           this.height
         );
